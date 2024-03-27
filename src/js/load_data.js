@@ -1,4 +1,4 @@
-fetch('get_entries.php')
+fetch('./../php/get_entries.php')
     .then(response => response.json())
     .then(data => {
         var table = document.getElementById('entries-table');

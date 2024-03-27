@@ -21,6 +21,6 @@ if ($conn->multi_query($sql) === TRUE) {
 }
 
 $conn->close();
-header('Location: index.html');
+header('Location: ./../html/feedback.html');
 exit;
 ?>

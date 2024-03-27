@@ -3,50 +3,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-image: url(../../assets/images/default.png);
     background-repeat: repeat;
+    display: flex; /*nötig für mittiges placement*/
+    justify-content: center;
+    /*min-height: 100vh;*/ /*stretcht main nach unten*/
 }
-main {
+section, header, footer {
     max-width: 600px; /*weißes feld*/
     margin: 25px; /*min. abstand von box bis zum seitenrand*/
     padding: 25px; /*abstand in box bis zum input feld*/
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /*kleiner schatten, nicht verschoben*/
-    text-align: center;
 }
 
 main h1 {
-    text-align: center;
+    text-align: center; /*mittige überschrift*/
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px;
+    display: flex; /*button stretcht zur seite*/
+    flex-direction: column; /*stretch nur horizontal*/
 }
 
-label {
-    margin-top: 10px;
-}
-
-input,
-select,
-textarea {
-    width: calc(100% - 20px);
+input, textarea {
+    width: 100%;
     padding: 8px;
-    margin-top: 5px;
+    margin-top: 20px;
     border-radius: 4px;
     border: 1px solid #ddd;
-    font-family: inherit;
+    font-size: 13px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 2rem; /*fürs ziehen am textfeld*/
+    max-height: 20rem;
 }
 
 button {
-    margin-top: 20px;
+    margin-top: 20px ;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
@@ -59,44 +60,18 @@ button:hover {
     background-color: #45a049;
 }
 
-fieldset {
-    border: none;
-    margin-top: 20px;
-}
-
-legend {
-    font-weight: bold;
-}
-
-#display {
-    position: fixed;
-    top:40px;
-    right: 40px;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: #4CAF50; 
-    color: white;
-    transition: opacity 0.5s ease;
-}
-
-#table-area {
-    display: flex;
-    justify-content: center;
-}
-
-#entries-table {
+table {
+    width: 100%; /*ganze breite innerhalb der section*/    
     border-collapse: collapse;
-    margin-top: 20px;
-    width: 100%;
 }
 
-#entries-table th, #entries-table td {
+table th, table td { /*general table settings*/
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
-#entries-table th {
-    background-color: #f2f2f2;
+table th { 
+    background-color: #f2f2f2; /*grauer tablheader*/
     color: black;
 }

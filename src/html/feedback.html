@@ -6,18 +6,17 @@
 </head>
 <body>
     <main>
+    <section>
         <h1>Feedback</h1>
-        <form id="survey-form" action="submit_db.php" method="post">
+        <form id="survey-form" action="./../php/submit_db.php" method="post">
             <input type="text" id="name" name="name" placeholder="Name" required>
             <textarea id="comments" name="comments" rows="4" placeholder="Comment" required></textarea>
-
             <button type="submit">Submit</button>
         </form>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quae non repudiandae asperiores ratione. Illo quae neque officiis, repellat porro mollitia deserunt nemo explicabo quo nobis, doloremque esse nulla. Eum?
-        </div>
-        <div id="display"></div>
-        <br>
+    </section>
+
+    <section>
+<!--    <div id="display"></div>-->
         <div id="table-area">
             <table id="entries-table">
                 <thead>
@@ -31,7 +30,12 @@
                 </tbody>
             </table>
         </div>
+    </section>
+
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quae non repudiandae asperiores ratione. Illo quae neque officiis, repellat porro mollitia deserunt nemo explicabo quo nobis, doloremque esse nulla. Eum?
+    </section>
     </main>
-    <script src="load_data.js"></script>
+    <script src="../js/load_data.js"></script>
 </body>
 </html> 
