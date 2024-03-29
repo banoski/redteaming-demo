@@ -1,0 +1,70 @@
+form {
+    display: flex; /*button stretcht zur seite*/
+    flex-direction: column; /*stretch nur horizontal*/
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 13px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 2rem; /*fürs ziehen am textfeld*/
+    max-height: 20rem;
+}
+
+button {
+    margin-top: 20px ;
+    padding: 10px;
+    background-color: #40aa40; /*37be3b*/
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a9e3a;
+}
+
+table {
+
+    width: 100%; /*ganze breite innerhalb der section*/    
+    border-collapse: collapse;
+}
+
+table th:nth-child(1), table td:nth-child(1) { 
+    width: 35%;
+}
+/*
+table th:nth-child(2), table td:nth-child(2) { 
+    width: 65%;
+}*/ /* not needed due to 100% width*/
+
+table th, table td { /*general table settings*/
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th { 
+    background-color: #f2f2f2; /*grauer tablheader*/
+    color: black;
+}
+
+table td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all; /*erzwingt umbruch bei langen strings*/
+}
+
+.empty-value {
+    color: lightgray;
+    font-style: italic;
+    user-select: none;
+}

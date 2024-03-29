@@ -3,20 +3,20 @@
 <head>
     <title>Feedback</title>
     <link rel="stylesheet" type="text/css" href="../css/base.css?<?php echo time()?>"> <!--to not cache the css file-->
+    <link rel="stylesheet" type="text/css" href="../css/feedback.css?<?php echo time()?>">
 </head>
 <body>
     <main>
     <section>
         <h1>Feedback</h1>
         <form id="survey-form" action="./../php/submit_db.php" method="post">
-            <input type="text" id="name" name="name" placeholder="Name" required>
+            <input type="text" id="name" name="name" maxlength="30" placeholder="Name" required>
             <textarea id="comments" name="comments" rows="4" placeholder="Comment" required></textarea>
             <button type="submit">Submit</button>
         </form>
     </section>
 
     <section>
-<!--    <div id="display"></div>-->
         <div id="table-area">
             <table id="entries-table">
                 <thead>

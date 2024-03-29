@@ -13,65 +13,25 @@ body {
     justify-content: center;
     /*min-height: 100vh;*/ /*stretcht main nach unten*/
 }
-section, header, footer {
+
+main {
+    width: 100%; /*stretch auf 600px, aber margin ist*/
     max-width: 600px; /*weißes feld*/
     margin: 25px; /*min. abstand von box bis zum seitenrand*/
+
+}
+
+section{
     padding: 25px; /*abstand in box bis zum input feld*/
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /*kleiner schatten, nicht verschoben*/
 }
 
-main h1 {
+section:not(:last-child) {
+    margin-bottom: 25px; /*margin zwischen sections, aber keins am ende*/
+}
+
+h1 {
     text-align: center; /*mittige überschrift*/
-}
-
-form {
-    display: flex; /*button stretcht zur seite*/
-    flex-direction: column; /*stretch nur horizontal*/
-}
-
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 20px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    font-size: 13px;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 2rem; /*fürs ziehen am textfeld*/
-    max-height: 20rem;
-}
-
-button {
-    margin-top: 20px ;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-table {
-    width: 100%; /*ganze breite innerhalb der section*/    
-    border-collapse: collapse;
-}
-
-table th, table td { /*general table settings*/
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-table th { 
-    background-color: #f2f2f2; /*grauer tablheader*/
-    color: black;
 }

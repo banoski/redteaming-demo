@@ -6,30 +6,16 @@ fetch('./../php/get_entries.php')
             var row = table.insertRow(-1);
             var cell1 = row.insertCell(0);
             var cell2 = row.insertCell(1);
-            cell1.innerHTML = data[i].name;
-            cell2.innerHTML = data[i].comments;
+            handleCellData(cell1, data[i].name);
+            handleCellData(cell2, data[i].comments);
+
+        }
+        function handleCellData(cell, data) {
+            if (data) {
+                cell.innerHTML = data;
+            } else {
+                cell.innerHTML = "empty";
+                cell.classList.add("empty-value");
+            }
         }
     });
-
-/*
-fetch('get_entries.php')
-    .then(response => response.json())
-    .then(data => {
-        // Get the table body
-        var tbody = document.getElementById('entries-table').getElementsByTagName('tbody')[0];
-
-        // Loop through the data and add rows to the table
-        data.forEach(entry => {
-            var row = document.createElement('tr');
-
-            var nameCell = document.createElement('td');
-            nameCell.textContent = entry.name;
-            row.appendChild(nameCell);
-
-            var commentsCell = document.createElement('td');
-            commentsCell.textContent = entry.comments;
-            row.appendChild(commentsCell);
-
-            tbody.appendChild(row);
-        });
-    });*/
