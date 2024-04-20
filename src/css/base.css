@@ -35,3 +35,18 @@ section:not(:last-child) {
 h1 {
     text-align: center; /*mittige überschrift*/
 }
+
+
+button{
+    margin-top: 20px ;
+    padding: 10px;
+    background-color: #40aa40; /*37be3b*/
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3a9e3a;
+}
