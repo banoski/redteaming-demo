@@ -1,1 +1,3 @@
-der vollstaendigkeit halber hier. 
+benötigte umbebungen:
+xampp / lampp
+php composer
