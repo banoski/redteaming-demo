@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Generator</title>
+    <link rel="stylesheet" type="text/css" href="/ba/src/css/base.css?<?php echo time()?>">
+</head>
+<body>
+    <nav>
+        <section>
+            <a href="/ba/src/html/index.html" class="link-button">Home</a>
+        </section>
+    </nav>
+    <main>
+        <section>
+            <h1>Random String Generator</h1>
+            <button id="generate-string" onclick="genString()">Generate String</button>
+        </section>
+        <section>
+            <input type="text" id="string-area" maxlength="64" placeholder="placeholder">
+        </section>
+    </main>
+    <script>
+        function genString() {
+            var chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            var string_length = 20;
+            var randomstring = '';
+            for (var i=0; i<string_length; i++) {
+                var rnum = Math.floor(Math.random() * chars.length);
+                randomstring += chars.substring(rnum,rnum+1);
+                if ((i+1) % 4 == 0 && i != string_length-1) {
+                    randomstring += '-';
+                }
+            }
+            var outputDiv = document.getElementById('string-area');
+            outputDiv.value = randomstring;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Test</title>
+    <link rel="stylesheet" type="text/css" href="/ba/src/css/base.css?<?php echo time()?>">
+</head>
+<body>
+    <nav>
+        <section>
+            <a href="/ba/src/html/index.html" class="link-button">Home</a>
+        </section>
+    </nav>
+    <main>
+        <section>
+            <h1>Cookie Test</h1>
+            <button id="show-cookie" onclick="showCookie()">Show Cookie</button>
+        </section>
+        <section id="cookie-field">test</section>
+    </main>
+    <script>
+        document.cookie = "abc123";
+        function showCookie() {
+            var cookieDiv = document.getElementById('cookie-field');
+            cookieDiv.innerHTML = document.cookie;
+        }
+    </script>
+</body>
+</html>

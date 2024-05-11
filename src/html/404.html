@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404 Not Found</title>
+    <link rel="stylesheet" type="text/css" href="/ba/src/css/base.css?<?php echo time()?>">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 15em;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <section>
+        <h2>Page not found</h2>
+        <div class="button-container">
+            <button onclick="window.history.back()">Go Back</button>
+            <button onclick="window.location.href='/ba/src/html/index.html'">Go Home</button>
+        </div>
+    </section   >
+</body>
+</html>
