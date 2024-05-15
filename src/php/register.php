@@ -2,7 +2,7 @@
 $host = "localhost";
 $db = "redteam";
 $user = "root";
-$pass = ""; // update with your password
+$pass = ""; // replace with .env
 $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
@@ -13,7 +13,7 @@ $username = $_POST['username'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $email = $_POST['email'];
 
-$sql = "INSERT INTO users (username, password, email) VALUES (?, ?, ?);";
+$sql = "INSERT INTO user (username, password, email) VALUES (?, ?, ?);";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $username, $password, $email);
 $stmt->execute();

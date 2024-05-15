@@ -1,0 +1,270 @@
+Prompt deutsch:
+"Ich benötige eine SQL-Anweisung, um 26 Einträge in eine Tabelle namens feedback_data in einer Datenbank namens redteam einzufügen. Jeder Eintrag sollte aus einem 'name' und einem 'comment' bestehen, die mit demselben Buchstaben beginnen. Die 'comments' sollten sich auf das Thema Red Teaming in der IT-Sicherheit beziehen. Hier ist ein Beispiel, wie der erste Eintrag aussehen sollte:
+'name': 'Anna', 'comment': 'Ausgezeichnete Angriffssimulation' 
+Bitte setzen Sie dieses Muster für alle 26 Einträge fort, beginnen Sie jeden 'name' und 'comment' mit dem nächsten Buchstaben des Alphabets. Die 'comments' sollten relevant und sinnvoll sein."
+
+GPT 3.5
+
+INSERT INTO redteam.feedback_data (name, comment) VALUES
+('Anna', 'Ausgezeichnete Angriffssimulation'),
+('Berta', 'Beste Sicherheitsprüfung bisher durchgeführt'),
+('Carla', 'Cyber-Sicherheit auf höchstem Niveau'),
+('David', 'Defensive Strategien verbessert durch Red Teaming'),
+('Eva', 'Effektive Abwehrmaßnahmen dank Red Teaming'),
+('Felix', 'Fortschrittliche Sicherheitslückenidentifikation'),
+('Greta', 'Gut durchdachte Angriffsszenarien'),
+('Hans', 'Hohe Qualität bei den Sicherheitstests'),
+('Ida', 'Intelligente Sicherheitsanalysen durchgeführt'),
+('Julia', 'Jedes Szenario wurde gründlich untersucht'),
+('Karl', 'Kritische Schwachstellen rechtzeitig erkannt'),
+('Laura', 'Leistungsstarke Sicherheitsberatung'),
+('Max', 'Mehr Sicherheit dank professionellem Red Teaming'),
+('Nora', 'Nützliche Einblicke in Sicherheitsrisiken'),
+('Oskar', 'Optimale Vorbereitung auf mögliche Angriffe'),
+('Paula', 'Perfekte Simulation von Angriffsszenarien'),
+('Quentin', 'Qualitativ hochwertige Sicherheitstests'),
+('Rosa', 'Realitätsnahe Bedrohungssimulationen'),
+('Simon', 'Schnelle Reaktion auf Sicherheitsbedrohungen'),
+('Tina', 'Top-Level-Sicherheitsbewertung erhalten'),
+('Ulrich', 'Umfassende Analyse potenzieller Risiken'),
+('Vera', 'Verlässliche Sicherheitsstrategien entwickelt'),
+('Wilhelm', 'Wichtige Sicherheitslücken geschlossen'),
+('Xaver', 'X-beliebige Angriffsszenarien erfolgreich abgewehrt'),
+('Yvonne', 'Yottabyte an Sicherheitsdaten analysiert'),
+('Zoe', 'Zuverlässige Sicherheitsmaßnahmen implementiert');
+
+
+
+
+GPT 4
+
+INSERT INTO feedback_data (name, comment) VALUES
+('Anna', 'Ausgezeichnete Angriffssimulation'),
+('Bernd', 'Bewertet Sicherheitslücken effektiv'),
+('Carla', 'Charakterisiert Angriffsvektoren präzise'),
+('David', 'Dokumentiert Schwachstellen detailliert'),
+('Erika', 'Erkennt frühzeitig Sicherheitsrisiken'),
+('Felix', 'Fördert das Verständnis von Cyber-Bedrohungen'),
+('Greta', 'Gewährleistet umfassende Systemtests'),
+('Hans', 'Hilft bei der Hardening-Strategie'),
+('Ina', 'Identifiziert verborgene Schwachstellen'),
+('Julia', 'Justiert Sicherheitseinstellungen optimal'),
+('Karl', 'Kontrolliert Zugriffsrechte sorgfältig'),
+('Lena', 'Liefert wichtige Sicherheitseinsichten'),
+('Max', 'Maximiert die Reaktionsfähigkeit bei Angriffen'),
+('Nina', 'Nutzt Penetrationstests zur Schwachstellenfindung'),
+('Oliver', 'Optimiert Abwehrmechanismen gegen Hacking'),
+('Paula', 'Prüft Netzwerke auf Angriffsresilienz'),
+('Quentin', 'Quantifiziert Sicherheitsbedrohungen'),
+('Rita', 'Reduziert Risiken durch proaktive Maßnahmen'),
+('Stefan', 'Simuliert Angriffsszenarien realitätsnah'),
+('Tina', 'Testet Sicherheitsvorkehrungen regelmäßig'),
+('Ulf', 'Untersucht Anwendungsschwachstellen gründlich'),
+('Vera', 'Verifiziert die Effektivität von Sicherheitsprotokollen'),
+('Walter', 'Wertet Angriffsdaten systematisch aus'),
+('Xenia', 'Xerographiert Berichte für Sicherheitsaudits'),
+('Yvonne', 'Yield wichtige Einblicke in die Netzwerksicherheit'),
+('Zoe', 'Zeigt Schwachstellen in Software auf');
+
+
+
+GPT 4o
+
+USE redteam;
+
+INSERT INTO feedback_data (name, comment) VALUES
+('Anna', 'Ausgezeichnete Angriffssimulation'),
+('Ben', 'Bedeutende Bedrohungserkennung'),
+('Clara', 'Cyberangriffe clever konzipiert'),
+('David', 'Detaillierte Durchbruchstechniken'),
+('Eva', 'Effektive Eindringlingserkennung'),
+('Felix', 'Fortschrittliche Forensikanalysen'),
+('Gina', 'Gezielte Gefahrenerkennung'),
+('Hans', 'Hervorragende Hackerabwehr'),
+('Ina', 'Intensive Infiltrationstests'),
+('Jonas', 'Jede Schwachstelle gefunden'),
+('Klaus', 'Kritische Kontrollmaßnahmen'),
+('Lena', 'Lückenlose Log-Analyse'),
+('Mark', 'Maßgeschneiderte Malware-Tests'),
+('Nina', 'Nutzerfreundliche Netzwerküberwachung'),
+('Olaf', 'Optimale Offensive-Techniken'),
+('Petra', 'Professionelle Penetrationstests'),
+('Quentin', 'Qualifizierte Qualitätskontrollen'),
+('Rita', 'Risikoanalyse realisiert'),
+('Stefan', 'Strategische Sicherheitslücken'),
+('Tina', 'Taktische Täuschungsmethoden'),
+('Udo', 'Umfassende Untersuchungen'),
+('Vera', 'Verlässliche Verwundbarkeitserkennung'),
+('Wolfgang', 'Weitreichende Web-Sicherheit'),
+('Xenia', 'X-fache Exploits verhindert'),
+('Yannick', 'Yberraschende Yberprüfungen'),
+('Zoe', 'Zahlreiche Zugriffsanalysen');
+
+
+
+VSC Copilot
+
+INSERT INTO feedback_data (name, comment) VALUES
+('Anna', 'Ausgezeichnete Angriffssimulation'),
+('Bert', 'Beeindruckende Breach-Erkennung'),
+('Carla', 'Cybersecurity ist deutlich verbessert'),
+('David', 'Defensive Maßnahmen sind stark'),
+('Eva', 'Effektive Eindringlingserkennung'),
+('Frank', 'Faszinierende Firewall-Funktionen'),
+('Gina', 'Großartige Gegenmaßnahmen gegen Hacks'),
+('Hans', 'Hervorragende Hacker-Abwehr'),
+('Iris', 'IT-Sicherheit ist verbessert'),
+('Jack', 'Jede Java-Anwendung ist sicherer'),
+('Karl', 'Klasse Kontrolle über Netzwerk'),
+('Lena', 'Lobenswerte Leistung in Sicherheit'),
+('Mike', 'Mächtige Malware-Abwehr'),
+('Nina', 'Netzwerk-Sicherheit ist top'),
+('Oscar', 'Offensive Sicherheitsmaßnahmen sind stark'),
+('Paula', 'Phishing-Angriffe werden gut erkannt'),
+('Quentin', 'Qualität der Sicherheitsmaßnahmen ist hoch'),
+('Rita', 'Red Teaming hat uns gestärkt'),
+('Stefan', 'Starke Sicherheitsprotokolle'),
+('Tina', 'Top Techniken gegen Eindringlinge'),
+('Uwe', 'Umfassender Schutz gegen Angriffe'),
+('Vera', 'Verstärkte Verteidigung gegen Hacks'),
+('Walter', 'Wirkungsvolle Wachsamkeit gegen Bedrohungen'),
+('Xenia', 'Xenon-Sicherheitsmaßnahmen sind stark'),
+('Yannick', 'Yes, unsere Sicherheit ist verbessert'),
+('Zoe', 'Zuverlässiger Schutz gegen Zero-Day-Angriffe');
+
+
+
+
+
+Prompt english:
+"I need an SQL statement to insert 26 entries into a table named feedback_data in a database named redteam. Each entry should consist of a 'name' and a 'comment' that start with the same letter. The 'comments' should relate to the topic of Red Teaming in IT security. Here is an example of what the first entry should look like:
+'name': 'Anna', 'comment': 'Excellent attack simulation' 
+Please continue this pattern for all 26 entries, starting each 'name' and 'comment' with the next letter of the alphabet. The 'comments' should be relevant and meaningful."
+
+GPT 3.5
+
+INSERT INTO redteam.feedback_data (name, comment) VALUES
+('Anna', 'Excellent attack simulation'),
+('Bob', 'Brilliant social engineering tactics'),
+('Charlie', 'Clever reconnaissance techniques'),
+('David', 'Diligent vulnerability assessment'),
+('Emma', 'Effective phishing campaigns'),
+('Frank', 'Forensic evidence analysis proficiency'),
+('George', 'Great understanding of threat modeling'),
+('Hannah', 'Highly skilled in penetration testing'),
+('Ian', 'Innovative security bypass methods'),
+('Julia', 'Judicious use of exploit techniques'),
+('Kevin', 'Knowledgeable about network security'),
+('Lucy', 'Leverages advanced evasion tactics'),
+('Mike', 'Masterful in deception tactics'),
+('Nora', 'Network infiltration expertise'),
+('Oscar', 'Outstanding risk assessment capabilities'),
+('Peter', 'Proficient in endpoint security'),
+('Quinn', 'Qualified in security policy development'),
+('Rachel', 'Resourceful in incident response'),
+('Sam', 'Strategic planning for red team operations'),
+('Tina', 'Tactical use of social media for reconnaissance'),
+('Uma', 'Utilizes unconventional attack vectors'),
+('Victor', 'Versatile in exploiting system vulnerabilities'),
+('Wendy', 'Well-versed in cryptographic protocols'),
+('Xander', 'eXpert in data exfiltration methods'),
+('Yara', 'Yields insights from security logs'),
+('Zack', 'Zealous in protecting sensitive information');
+
+
+
+GPT 4
+
+INSERT INTO feedback_data (name, comment) VALUES
+('Anna', 'Excellent attack simulation'),
+('Brian', 'Brilliant breach detection'),
+('Cara', 'Careful consideration of countermeasures'),
+('David', 'Detailed defense analysis'),
+('Elena', 'Effective exploit identification'),
+('Fiona', 'Forensic findings facilitated'),
+('George', 'Great guidance on governance'),
+('Helen', 'Helpful hacking strategies'),
+('Ian', 'Innovative intrusion tests'),
+('Julia', 'Judicious judgment of justifications'),
+('Kevin', 'Knowledgeable about key threats'),
+('Laura', 'Logical layout of likely risks'),
+('Mike', 'Meticulous malware management'),
+('Nina', 'Noteworthy network navigation'),
+('Olivia', 'Outstanding operational oversight'),
+('Paul', 'Precise penetration procedures'),
+('Quinn', 'Quality quarantine tactics'),
+('Rachel', 'Remarkable resilience readiness'),
+('Steve', 'Superb security safeguard suggestions'),
+('Tina', 'Thorough threat theory understanding'),
+('Ursula', 'Useful usability evaluations'),
+('Victor', 'Valuable vulnerability verification'),
+('Wendy', 'Wise warning system workflows'),
+('Xavier', 'eXcellent external access examination'),
+('Yasmin', 'Yielding yet yielding strategic insights'),
+('Zara', 'Zealous zero-day attack anticipation');
+
+
+
+GPT 4o
+
+USE redteam;
+
+INSERT INTO feedback_data (name, comment) VALUES
+('Anna', 'Excellent attack simulation'),
+('Brian', 'Brilliant breach analysis'),
+('Catherine', 'Comprehensive countermeasure evaluation'),
+('David', 'Detailed defense strategies'),
+('Eva', 'Effective exploit identification'),
+('Frank', 'Focused forensic investigation'),
+('Grace', 'Great gap assessment'),
+('Henry', 'Helpful hacking insights'),
+('Irene', 'In-depth intrusion detection'),
+('Jack', 'Judicious jamming techniques'),
+('Karen', 'Keen keylogging detection'),
+('Liam', 'Logical lateral movement analysis'),
+('Maria', 'Meticulous malware analysis'),
+('Nathan', 'Notable network penetration'),
+('Olivia', 'Outstanding operational security review'),
+('Peter', 'Precise phishing simulation'),
+('Quinn', 'Quick quarantine response'),
+('Rachel', 'Robust reconnaissance tactics'),
+('Sam', 'Solid social engineering prevention'),
+('Tina', 'Thorough threat assessment'),
+('Umar', 'Unique user awareness training'),
+('Vera', 'Valuable vulnerability verification'),
+('Will', 'Wise wireless network analysis'),
+('Xander', 'Excellent XSS testing'),
+('Yara', 'Yielding yield security'),
+('Zack', 'Zealous zero-day exploit detection');
+
+
+
+VSC Copilot
+
+INSERT INTO redteam.feedback_data (name, comment) VALUES 
+('Anna', 'Attacks simulated effectively'),
+('Bob', 'Breach detection was top-notch'),
+('Charlie', 'Cybersecurity measures tested thoroughly'),
+('Diana', 'Defenses evaluated properly'),
+('Edward', 'Excellent penetration testing'),
+('Fiona', 'Found vulnerabilities quickly'),
+('George', 'Great at identifying weak points'),
+('Hannah', 'Highly skilled at intrusion detection'),
+('Ivan', 'Impressive security audit'),
+('Jack', 'Justified our investment in red teaming'),
+('Katie', 'Keen eye for security gaps'),
+('Liam', 'Learned a lot from the exercise'),
+('Mia', 'Mitigation strategies suggested were effective'),
+('Nick', 'Noticed issues we overlooked'),
+('Olivia', 'Outstanding risk assessment'),
+('Paul', 'Penetration tests were thorough'),
+('Quincy', 'Quick to identify potential threats'),
+('Rachel', 'Red teaming was a valuable experience'),
+('Steve', 'Security vulnerabilities were well-documented'),
+('Tina', 'Thorough in their approach'),
+('Uma', 'Understood our system well'),
+('Victor', 'Valuable insights into our security'),
+('Wendy', 'We will definitely do this again'),
+('Xavier', 'eXcellent threat modeling'),
+('Yara', 'Yielded important security improvements'),
+('Zoe', 'Zeroed in on key vulnerabilities');

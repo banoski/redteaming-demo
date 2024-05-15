@@ -16,6 +16,7 @@ $user = getenv('DB_USER');
 $pass = getenv('DB_PASS');
 $conn = new mysqli($host, $user, $pass, $db);*/
 
+session_start(); // wird gebraucht für seiten nach login
 $host = "localhost";
 $db = "redteam";
 $user = "root";

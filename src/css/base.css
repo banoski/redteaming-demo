@@ -11,7 +11,7 @@
 } */
 
 body {
-    background-image: url(../../assets/images/default.png);
+    background-image: url(/ba/assets/images/default.png);
     background-repeat: repeat;
     display: flex; /*nötig für mittiges placement*/
     justify-content: center;

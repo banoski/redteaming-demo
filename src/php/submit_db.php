@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
+$dbname = "redteam";
 $username = "root";
 $password = "";
-$dbname = "feedback_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -17,25 +17,25 @@ $row = $result->fetch_assoc();
 $name_maxlength = $row['CHARACTER_MAXIMUM_LENGTH'];
 echo "<script>console.log(`charlimit name: $name_maxlength`)</script>";
 
-//comments char limit, if any
-$query = "SELECT CHARACTER_MAXIMUM_LENGTH FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'feedback_data' AND COLUMN_NAME = 'comments'";
+//comment char limit, if any
+$query = "SELECT CHARACTER_MAXIMUM_LENGTH FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'feedback_data' AND COLUMN_NAME = 'comment'";
 $result = $conn->query($query);
 $row = $result->fetch_assoc();
-$comments_maxlength = $row['CHARACTER_MAXIMUM_LENGTH'];
-echo "<script>console.log(`charlimit comment: $comments_maxlength`)</script>";
+$comment_maxlength = $row['CHARACTER_MAXIMUM_LENGTH'];
+echo "<script>console.log(`charlimit comment: $comment_maxlength`)</script>";
 
 //$name = $_POST['name']; //not sanitized
 $name = $conn->real_escape_string($_POST['name']); //sanitized
-$comments = $_POST['comments'];
+$comment = $_POST['comment'];
 
 if (strlen($name) > $name_maxlength) {
     $name = substr($name, 0, $name_maxlength);
 }
-if (strlen($comments) > $comments_maxlength) {
-    $comments = substr($comments, 0, $comments_maxlength);
+if (strlen($comment) > $comment_maxlength) {
+    $comment = substr($comment, 0, $comment_maxlength);
 }
 
-$sql = "INSERT INTO feedback_data (name, comments) VALUES ('$name', '$comments')";
+$sql = "INSERT INTO feedback_data (name, comment) VALUES ('$name', '$comment')";
 
 if ($conn->multi_query($sql) === TRUE) {
     echo "New record created successfully";
@@ -45,7 +45,7 @@ if ($conn->multi_query($sql) === TRUE) {
 
 $conn->close();
 echo "<script>console.log(`$sql`)</script>";
-header('Refresh: 0.5; URL=./../html/feedback.html');
-//header('Location: ./../html/feedback.html');
+header('Refresh: 0.5; URL=/ba/src/html/feedback.html');
+//header('Location: /ba/src/html/feedback.html');
 exit;
 ?>

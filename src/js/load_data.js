@@ -1,5 +1,10 @@
-fetch('./../php/get_entries.php')
-    .then(response => response.json())
+fetch('/ba/src/php/get_entries.php')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
         var table = document.getElementById('entries-table');
         for (var i = 0; i < data.length; i++) {
@@ -7,8 +12,7 @@ fetch('./../php/get_entries.php')
             var cell1 = row.insertCell(0);
             var cell2 = row.insertCell(1);
             handleCellData(cell1, data[i].name);
-            handleCellData(cell2, data[i].comments);
-
+            handleCellData(cell2, data[i].comment);
         }
         function handleCellData(cell, data) {
             if (data) {
@@ -18,4 +22,7 @@ fetch('./../php/get_entries.php')
                 cell.classList.add("empty-value");
             }
         }
+    })
+    .catch(e => {
+        console.error('An error occurred fetching the JSON data: ' + e.message);
     });
