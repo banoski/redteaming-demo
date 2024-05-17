@@ -1,3 +1,11 @@
+<?php
+session_start(); // start the session
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    header('Location: /ba/pages/dashboard'); // redirect to dashboard
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -5,6 +5,8 @@
 </FilesMatch>
 ErrorDocument 404 /ba/pages/404.html
 
+# achtung, POST data geht bei redirect verloren
+
 RewriteEngine On
 # macht extern aus /dir/foo.html -> /dir/foo
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]

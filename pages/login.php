@@ -12,6 +12,7 @@ if (isset($_SESSION['message'])) {
     unset($_SESSION['message']); // remove the message from the session
 }
 
+//zeigt fehler an von register_handler
 if (isset($_SESSION['error'])) {
     echo '<script>alert("' . $_SESSION['error'] . '");</script>';
     unset($_SESSION['error']); // remove the message from the session
@@ -34,7 +35,8 @@ if (isset($_SESSION['error'])) {
     <main>
         <section>
             <h1>Login</h1>
-            <form action="/ba/pages/login_handler.php" method="post">
+            <!-- ohne .php schreiben, sonst wird durch redirect der .htaccess keine $_POST data uebertragen!!!-->
+            <form action="/ba/php/login_handler" method="POST">
                 <input type="text" id="username" name="username" placeholder="Username" required>
                 <input type="password" id="password" name="password" placeholder="Password" required>
                 <button type="submit">Login</button>

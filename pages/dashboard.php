@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: /ba/pages/login");
@@ -15,7 +15,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <nav>
         <section>
             <a href="/ba/pages/index" class="link-button">Home</a>
-            <a href="/ba/php/logout_handler" class="link-button">Logout</a>
+            <a href="/ba/php/logout_handler.php" class="link-button">Logout</a>
         </section>
     </nav>
     <main>
