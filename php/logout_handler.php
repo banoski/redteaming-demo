@@ -6,6 +6,6 @@ session_destroy();
 // gibt meldung aus, bevor weitergeleitet wird
 echo "<script type='text/javascript'> 
     alert('Sie haben sich erfolgreich ausgeloggt.'); 
-    window.location.href = '/ba/src/html/index.html'; 
+    window.location.href = '/ba/pages/index'; 
 </script>";
 ?>

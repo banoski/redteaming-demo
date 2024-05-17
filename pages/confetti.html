@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Konfetti Test</title>
-    <link rel="stylesheet" type="text/css" href="/ba/src/css/base.css?<?php echo time()?>">
+    <link rel="stylesheet" type="text/css" href="/ba/css/base.css?<?php echo time()?>">
     <style>
         #my-canvas, #particles-js {
             position: fixed;
@@ -19,7 +19,7 @@
 <body>
     <nav>
         <section>
-            <a href="/ba/src/html/index.html" class="link-button">Home</a>
+            <a href="/ba/pages/index" class="link-button">Home</a>
         </section>
     </nav>
     <canvas id="my-canvas"></canvas>
@@ -39,7 +39,7 @@
 
         setTimeout(function() {
             confetti.clear();
-        }, 1500); //stoppt konfetti nach 5 sekunfen
+        }, 1500); //stoppt konfetti nach 5 sekunden
     };
 
     function particles() {

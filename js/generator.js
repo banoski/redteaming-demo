@@ -1,7 +1,7 @@
 function generateImage() {
     // Execute the PHP script using AJAX
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "../php/generate-image.php", true);
+    xhr.open("GET", "/ba/php/generate-image.php", true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // Image generation successful, display the image

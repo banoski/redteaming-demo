@@ -28,7 +28,7 @@ if ($stmt->affected_rows === 1) {
     $_SESSION['message'] = 'Registration successful! You can now log in.';
 
     // Redirect to the login page
-    header('Location: /ba/src/html/login.php');
+    header('Location: /ba/pages/login');
     exit;
 } else {
     echo "Error: " . $stmt->error;

@@ -30,9 +30,7 @@ if ($conn->connect_error) {
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-var_dump($_POST);
-
-$sql = "SELECT password FROM users WHERE username = ?;";
+$sql = "SELECT password FROM user WHERE username = ?;";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $username);
 $stmt->execute();
@@ -42,10 +40,12 @@ $user = $result->fetch_assoc();
 if ($user && password_verify($password, $user['password'])) {
     $_SESSION['loggedin'] = true; //set logged-in session
     $_SESSION['username'] = $username;
-    header('Location: /ba/src/html/dashboard.php'); //redirect to dashboard
+    header('Location: /ba/pages/dashboard'); //redirect to dashboard
     exit;
 } else {
-    echo "Invalid username or password.";
+    $_SESSION['error'] = "Invalid username or password.";
+    header('Location: /ba/pages/login'); //redirect back to login
+    exit;
 }
 
 $stmt->close();

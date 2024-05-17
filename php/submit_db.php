@@ -45,7 +45,7 @@ if ($conn->multi_query($sql) === TRUE) {
 
 $conn->close();
 echo "<script>console.log(`$sql`)</script>";
-header('Refresh: 0.5; URL=/ba/src/html/feedback.html');
-//header('Location: /ba/src/html/feedback.html');
+header('Refresh: 0.5; URL=/ba/pages/feedback');
+//header('Location: /ba/pages/feedback');
 exit;
 ?>

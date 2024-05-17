@@ -1,4 +1,4 @@
-fetch('/ba/src/php/get_entries.php')
+fetch('/ba/php/get_entries.php')
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);

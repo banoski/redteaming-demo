@@ -30,11 +30,11 @@ def generate_image(size, intensity_range, color=False, open_image=False, filenam
         output_filename = filename
     else:
         output_filename = f'output.png' #f'output_{size}x{size}.png'
-    output_path = os.path.join('../../assets/generated-images', output_filename)  # Updated path
+    output_path = os.path.join('/ba/assets/generated-images', output_filename)  # Updated path
 
     # Check if end folder exists or create it
-    if not os.path.exists('../../assets/generated-images') or not os.path.isdir('../../assets/generated-images'):
-        os.makedirs('../../assets/generated-images')
+    if not os.path.exists('/ba/assets/generated-images') or not os.path.isdir('/ba/assets/generated-images'):
+        os.makedirs('/ba/assets/generated-images')
 
     logging.info(f'Saving image as {output_path}')
 
