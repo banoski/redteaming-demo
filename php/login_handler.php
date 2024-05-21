@@ -1,8 +1,7 @@
 <?php
-/*
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(dirname(__DIR__)));
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__)); //dirname = parent folder of (__DIR__) = current folder
 $dotenv->load();
 
 // Start the session if it's not already started
@@ -10,17 +9,10 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-$host = getenv('DB_HOST');
-$db = getenv('DB_NAME');
-$user = getenv('DB_USER');
-$pass = getenv('DB_PASS');
-$conn = new mysqli($host, $user, $pass, $db);*/
-
-session_start(); // wird gebraucht für seiten nach login
-$host = "localhost";
-$db = "redteam";
-$user = "root";
-$pass = ""; // update with your password
+$host = $_ENV['DB_HOST'];
+$db = $_ENV['DB_NAME'];
+$user = $_ENV['DB_USER'];
+$pass = $_ENV['DB_PASS'];
 $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
@@ -40,11 +32,11 @@ $user = $result->fetch_assoc();
 if ($user && password_verify($password, $user['password'])) {
     $_SESSION['loggedin'] = true; //set logged-in session
     $_SESSION['username'] = $username;
-    header('Location: /ba/pages/dashboard'); //redirect to dashboard
+    header('Location: /ba/pages/dashboard'); //redirect to dashboard, bei erfolgreichem login
     exit;
 } else {
     $_SESSION['error'] = "Invalid username or password.";
-    header('Location: /ba/pages/login'); //redirect back to login
+    header('Location: /ba/pages/login'); //redirect back to login, bei falschem login
     exit;
 }
 

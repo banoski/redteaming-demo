@@ -1,8 +1,14 @@
 <?php
-$servername = "localhost";
-$dbname = "redteam";
-$username = "root";
-$password = "";
+require_once '../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__)); //dirname = parent folder of (__DIR__) = current folder
+$dotenv->load();
+
+$host = $_ENV['DB_HOST'];
+$db = $_ENV['DB_NAME'];
+$user = $_ENV['DB_USER'];
+$pass = $_ENV['DB_PASS'];
+$conn = new mysqli($host, $user, $pass, $db);
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

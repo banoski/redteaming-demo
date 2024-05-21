@@ -1,8 +1,18 @@
 <?php
-$host = "localhost";
-$db = "redteam";
-$user = "root";
-$pass = ""; // replace with .env
+require_once '../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__)); //dirname = parent folder of (__DIR__) = current folder
+$dotenv->load();
+
+// Start the session if it's not already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+$host = $_ENV['DB_HOST'];
+$db = $_ENV['DB_NAME'];
+$user = $_ENV['DB_USER'];
+$pass = $_ENV['DB_PASS'];
 $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
