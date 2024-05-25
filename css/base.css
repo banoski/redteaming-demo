@@ -49,6 +49,7 @@ section:not(:last-child) {
 
 h1,h2 {
     text-align: center; /*mittige überschrift*/
+    margin-bottom: 25px;
 }
 
 

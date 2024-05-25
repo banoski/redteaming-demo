@@ -10,8 +10,6 @@ $user = $_ENV['DB_USER'];
 $pass = $_ENV['DB_PASS'];
 $conn = new mysqli($host, $user, $pass, $db);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
