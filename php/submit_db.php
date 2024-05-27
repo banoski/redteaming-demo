@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 
 $name = $conn->real_escape_string($_POST['name']); //sanitized
-$comment = $_POST['comment'];
+$comment = $_POST['comment']; // nicht sanitized
 
 if (strlen($name) > $name_maxlength) {
     $name = substr($name, 0, $name_maxlength);

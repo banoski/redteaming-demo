@@ -21,7 +21,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <main>
         <section>
             <h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
-            <p>This is a protected area.</p>
+            <p>This is a protected area for registered Users.</p>
+            <a href="/ba/pages/private/Sblogpost1" class="link-button">Blog Post Red Teaming</a>
+
         </section>
     </main>
 </body>
