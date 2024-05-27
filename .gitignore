@@ -1,6 +1,4 @@
-/test/
 /vendor/
-/.env
 /composer.lock
 /composer.phar
 /composer.phar.asc
