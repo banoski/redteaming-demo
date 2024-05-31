@@ -2,3 +2,22 @@
 /composer.lock
 /composer.phar
 /composer.phar.asc
+
+/assets/generated-images/
+/assets/images/
+
+/js/generator.js
+
+/pages/confetti.html
+/pages/cookie.html
+/pages/generator.html
+/pages/string-generator.html
+/pages/xsstest.html
+
+/php/generate-image.php
+
+/python/
+
+
+
+Links aus index rausnehmen!!!

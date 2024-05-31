@@ -27,7 +27,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 <input type="text" id="username" name="username" placeholder="Username" required>
                 <input type="password" id="password" name="password" placeholder="Password" required>
                 <input type="email" id="email" name="email" placeholder="Email" required>
+                <button disabled>Register ist not available right now.</button>
+
+                <!-- Register-Funktion ist deaktiviert.
                 <button type="submit">Register</button>
+                --> 
             </form>
         </section>
     </main>
